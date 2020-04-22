@@ -1,21 +1,20 @@
-#Rama Jen
+#Libreria flask para pagina web
 from flask  import Flask, render_template
-
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/') #Se crea pagina principal
 def home():
     return render_template('home.html')
 
-@app.route('/About')
+@app.route('/About') #Se crea pagina About
 def about():
     return render_template('About.html')
 
-@app.route('/Dostoievskys')
+@app.route('/Dostoievskys') #Se crea pagina Dostoievskys
 def Dostoievskys():
     return render_template('Dostoievskys.html')
     
-@app.route('/Arkthar')
+@app.route('/Arkthar') #Se crea pagina Arkthar
 def Arkthar():
     return render_template('Arkthar.html')
 
