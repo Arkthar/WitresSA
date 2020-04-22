@@ -10,6 +10,10 @@ def home():
 def about():
     return render_template('About.html')
 
+@app.route('/Arkthar')
+def Arkthar():
+    return render_template('Arkthar.html')
+
 
 if __name__=='__main__':
     app.run(debug=True)
