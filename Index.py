@@ -1,14 +1,5 @@
-#Libreria flask para pagina web
-#render_templates, es para plantillas en html
-#request, es para parametros por Url
-#las llaves {} para llamar algo desde python
-#url_for
-#send_file
-#forms es para formularios
-#este es el formulario donde se reciben los datos del grafo 
-#field es para el dato que se esta recibiendo
-#vertices y aristas son string
-from flask  import Flask, render_template
+from flask  import Flask, render_template, request
+from forms import DatosGrafo #Se llama a la clase que guarda los datos
 
 app = Flask(__name__)
 
@@ -20,8 +11,13 @@ def home():
 def about():
     return render_template('About.html')
 
-@app.route('/Dostoievskys') #Se crea pagina Dostoievskys
+@app.route('/Dostoievskys', methods=["GET","POST"]) #Se crea pagina Dostoievskys
 def Dostoievskys():
+    form = DatosGrafo()
+    if request.method == 'POST':
+        print(form.Vertices.data)
+        print(form.Aristas.data)
+
     return render_template('Dostoievskys.html')
     
 @app.route('/Arkthar') #Se crea pagina Arkthar
@@ -32,4 +28,11 @@ def Arkthar():
 if __name__=='__main__':
     app.run(debug=True)
 
-    #dfgsd
+#request, es para parametros por Url
+#las llaves {} para llamar algo desde python
+#url_for
+#send_file
+#forms es para formularios
+#este es el formulario donde se reciben los datos del grafo 
+#field es para el dato que se esta recibiendo
+#vertices y aristas son string
