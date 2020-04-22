@@ -14,6 +14,13 @@ def about():
 @app.route('/Dostoievskys')
 def Dostoievskys():
     return render_template('Dostoievskys.html')
+    
+@app.route('/Arkthar')
+def Arkthar():
+    return render_template('Arkthar.html')
+
 
 if __name__=='__main__':
     app.run(debug=True)
+
+    #dfgsd
