@@ -11,6 +11,9 @@ def home():
 def about():
     return render_template('About.html')
 
+@app.route('/Dostoievskys')
+def Dostoievskys():
+    return render_template('Dostoievskys.html')
 
 if __name__=='__main__':
     app.run(debug=True)
