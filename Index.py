@@ -27,7 +27,7 @@ def Arkthar():
     if request.method == 'POST':
         print(Holas.Vertices.data)
         print(Holas.Aristas.data)
-        return render_template("grafo.html")
+        return render_template("grafos.html")
     return render_template('Arkthar.html',Holas=Holas)   
     
 
