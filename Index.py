@@ -17,14 +17,18 @@ def about():
 def Dostoievskys():
     return render_template('Dostoievskys.html')
 
+@app.route('/grafos') #Se crea pagina grafos
+def grafos():
+    return render_template('grafos.html')
+
 @app.route('/Arkthar', methods=['GET','POST']) #Se crea pagina Arkthar
 def Arkthar():
-    form = DatosGrafo(request.form)
+    Holas = DatosGrafo(request.form)
     if request.method == 'POST':
-        print(form.Vertices.data)
-        print(form.Aristas.data)
+        print(Holas.Vertices.data)
+        print(Holas.Aristas.data)
         return render_template("grafo.html")
-    return render_template('Arkthar.html')    
+    return render_template('Arkthar.html',Holas=Holas)   
     
 
 
