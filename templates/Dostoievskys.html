@@ -1,30 +1,25 @@
+<!DOCTYPE html>
 {% extends "layaout.html" %}
 {% block content %}
 
 <div class="jumbotron">
-
-    <h1 class="display-4">Dostoievskys</h1>
-    <p class="lead">Esta es la pagina de la mujer mas linda del mundo :3</p>
-    <hr class="my-4">
-    <p>Haz click para ver una de mis cosas favoritas :3</p>
-    <a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=77ao2LBa_eY" role="button">Lugar Feliz</a>
-    
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Vertice</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Arista</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
-  </div>
+  <h1 class="display-4">Dostoievskys</h1>
+  <hr class="my-4">
+  <form action=" " method="post" novalidate>
+      <p>
+          {{ grafo.vertices.label }}<br> {{ grafo.vertices(size=32) }} {% for error in grafo.vertices.errors %}
+          <!-- Se tiene una validacion de errores..  for error in grafo... xD -->
+          <span style="color: red;">[{{ error }}]</span> {% endfor %}
+      </p>
+      <p>
+          {{ grafo.aristas.label }}<br> {{ grafo.aristas(size=32) }} {% for error in grafo.aristas.errors %}
+          <span style="color: red;">[{{ error }}]</span> {% endfor %}
+      </p>
+      <p>{{ grafo.submit() }}</p>
+  </form>
+  <hr class="my-4">
+  <p class="lead">Esta es la pagina de la mujer mas linda del mundo :3</p>
+  <p>Haz click para ver una de mis cosas favoritas :3</p>
+  <a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=77ao2LBa_eY" role="button">Lugar Feliz</a>
+</div>
 {% endblock %}

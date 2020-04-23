@@ -3,6 +3,7 @@ from forms import DatosGrafo
 from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 @app.route('/') #Se crea pagina principal
 def home():
@@ -14,13 +15,13 @@ def about():
 
 @app.route('/Dostoievskys', methods=['GET','POST']) #Se crea pagina Dostoievskys
 def Dostoievskys():
-    form = DatosGrafo(request.form)
+    grafo = DatosGrafo(request.form)
     if request.method == 'POST':
-        print(form.Vertices.data)
-        print(form.Aristas.data)
+        print(grafo.vertices.data)
+        print(grafo.aristas.data)
         return render_template("grafo.html")
 
-    return render_template('Dostoievskys.html')
+    return render_template('Dostoievskys.html', grafo = grafo)
 
 @app.route('/Arkthar') #Se crea pagina Arkthar
 def Arkthar():

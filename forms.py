@@ -3,6 +3,6 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 class DatosGrafo(Form):
-    Vertices = StringField('Vertices', validators=[DataRequired()])
-    Aristas = StringField('Aristas', validators=[DataRequired()])
+    vertices = StringField('Vertices', validators=[DataRequired()])
+    aristas = StringField('Aristas', validators=[DataRequired()])
     submit = SubmitField('Ingresar')
