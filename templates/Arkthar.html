@@ -3,11 +3,34 @@
 {% block content %}
 <div class="jumbotron">
 
-    <h1 class="display-4">Arkthar</h1>
+
+  <h1 class="display-4">Arkthar</h1>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Correo Electronico</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">Tranquilo nosotros no compartiremos tu correo</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Contraseña</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <hr class="my-4">
     <p class="lead">Pagina de Arkthar</p>
-    <hr class="my-4">
+   
     <p>Haz click para escuchar mi musica :D</p>
     <a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=SJbu5j86_wo" role="Purple">Purple</a>
+
+
+
+
 
   </div>
 {% endblock %}
