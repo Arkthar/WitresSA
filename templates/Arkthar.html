@@ -12,10 +12,12 @@
         {{ Holas.Vertices.label }}<br> {{ Holas.Vertices(size=32) }} {% for error in Holas.Vertices.errors %}
         <!-- Se tiene una validacion de errores..  for error in grafo... xD -->
         <span style="color: red;">[{{ error }}]</span> {% endfor %}
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </p>
     <p>
         {{ Holas.Aristas.label }}<br> {{ Holas.Aristas(size=32) }} {% for error in Holas.Aristas.errors %}
         <span style="color: red;">[{{ error }}]</span> {% endfor %}
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </p>
     <p>{{ Holas.submit() }}</p>
 </form>
