@@ -1,12 +1,39 @@
 {% extends "layaout.html" %}
 {% block content %}
-<div class="jumbotron">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 
-    <h1 class="display-4">Los CasiCra</h1>
-    <p class="lead">Bienvenido a nuestra comunidad de videjuegos, y disfruta de los eventos que tenemos para ti.</p>
-    <hr class="my-4">
-    <p>Si tienes dudas de nuestros no dudes en contactarnos.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button"> :D </a>
-    
+<section class="nes-container is-dark">
+<section class="message -right">
+  <!-- Balloon -->
+  <div class="nes-balloon from-right is-dark">
+    <h1>Los CasiCra</h1>
   </div>
+    <center>
+      <i class="nes-charmander"></i>
+    </center>
+</section>
+
+<div class="nes-container is-rounded is-dark">
+    <p class="lead">Bienvenido a nuestra comunidad de videjuegos</p>
+  </div>
+<pre>
+</pre>
+<div class="nes-container is-rounded">
+  <center><section class="icon-list">
+    <!-- controllers -->
+    <i class="nes-logo"></i>
+    <i class="nes-jp-logo"></i>
+    <i class="snes-logo"></i>
+    <i class="snes-jp-logo"></i>
+  </center>
+</div>
+<pre>
+</pre>
+<div class="nes-container is-rounded is-dark">
+    <p>Disfruta de lo que tenemos para ti.</p>
+    <p>Si tienes dudas de nuestros no dudes en contactarnos.</p>
+    <a class="nes-btn is-success" href="http://slither.io/">Haz click Aqui</a>
+</div>
+</section>
 {% endblock %}
