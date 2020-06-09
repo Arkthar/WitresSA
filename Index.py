@@ -18,6 +18,10 @@ def Dostoievskys():
 def Arkthar():
     return render_template('Arkthar.html')
 
+@app.route('/Muchopoquitonada') #Se crea pagina Muchopoquitonada
+def Muchopoquitonada():
+    return render_template('Muchopoquitonada.html')
+
 
 if __name__=='__main__':
     app.run(debug=True)
