@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/About') #Se crea pagina About
+@app.route('/LosCasiCra') #Se crea pagina About
 def about():
-    return render_template('About.html')
+    return render_template('Casicra.html')
 
 @app.route('/Dostoievskys') #Se crea pagina Dostoievskys
 def Dostoievskys():
