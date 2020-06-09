@@ -8,7 +8,7 @@ def home():
 
 @app.route('/LosCasiCra') #Se crea pagina About
 def about():
-    return render_template('Casicra.html')
+    return render_template('about.html')
 
 @app.route('/Dostoievskys') #Se crea pagina Dostoievskys
 def Dostoievskys():
